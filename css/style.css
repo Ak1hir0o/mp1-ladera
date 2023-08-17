@@ -129,6 +129,20 @@ h6 {
     .appointment-btn {
         display: none;
     }
+
+    #extender {
+        display: block;
+    }
+}
+
+@media(min-width: 991px) {
+    .mobile-nav-toggle {
+        display: block;
+    }
+
+    #extender {
+        display: none;
+    }
 }
 
 /*Navigation for desktop*/
@@ -183,6 +197,11 @@ h6 {
     border-color: #1977cc;
 }
 
+extender {
+    display: none;
+}
+
+
 /* Navigation for mobile devices */
 
 .mobile-nav-toggle {
@@ -206,6 +225,7 @@ h6 {
     .navbar ul {
         display: none;
     }
+
 }
 
 .navbar-mobile {
@@ -259,6 +279,8 @@ h6 {
 .navbar-mobile .getstarted {
     margin: 15px;
 }
+
+
 
 /*General styles for sections*/
 
