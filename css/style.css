@@ -74,7 +74,6 @@ h6 {
 }
 
 /*Header*/
-
 #header {
     background: #fff;
     transition: all 0.5s;
@@ -107,7 +106,6 @@ h6 {
 }
 
 /*Appointment btn */
-
 .appointment-btn {
     margin-left: 25px;
     background: #1977cc;
@@ -146,7 +144,6 @@ h6 {
 }
 
 /*Navigation for desktop*/
-
 .navbar {
     padding: 0;
 }
@@ -203,7 +200,6 @@ extender {
 
 
 /* Navigation for mobile devices */
-
 .mobile-nav-toggle {
     color: #2c4964;
     font-size: 28px;
@@ -283,7 +279,6 @@ extender {
 
 
 /*General styles for sections*/
-
 section {
     padding: 60px 0;
     overflow: hidden;
@@ -334,7 +329,6 @@ section {
 }
 
 /*Hero section*/
-
 #home {
     width: 100%;
     height: 90vh;
@@ -397,7 +391,6 @@ section {
 }
 
 /*About section*/
-
 .about .icon-boxes h4 {
     font-size: 18px;
     color: #4b7dab;
@@ -557,7 +550,6 @@ section {
 }
 
 /*Services*/
-
 .services .icon-box {
     text-align: center;
     border: 1px solid #d5e1ed;
@@ -657,7 +649,6 @@ section {
 }
 
 /*Doctors*/
-
 .doctors {
     background: #fff;
 }
@@ -772,7 +763,6 @@ section {
 }
 
 /*Google Maps*/
-
 .mapouter {
     position: relative;
     text-align: right;
@@ -897,7 +887,6 @@ section {
 }
 
 /*Footer*/
-
 #footer {
     background: #eeeeee;
     padding: 0 0 30px 0;
@@ -1040,7 +1029,6 @@ section {
 }
 
 /*Back to top btn*/
-
 .back-to-top {
     position: fixed;
     visibility: hidden;
@@ -1072,7 +1060,6 @@ section {
 }
 
 /*For appointment page*/
-
 #appointment {
     padding: 150px 0;
     overflow: hidden;
