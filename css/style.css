@@ -1,4 +1,3 @@
-/* General styles*/
 body {
     font-family: "Open Sans", sans-serif;
     color: #444444;
@@ -23,7 +22,7 @@ h6 {
     font-family: "Raleway", sans-serif;
 }
 
-/* Topbar styles*/
+/*Top bar*/
 #topbar {
     background: #fff;
     height: 40px;
@@ -105,7 +104,7 @@ h6 {
     max-height: 40px;
 }
 
-/*Appointment btn */
+/*appointment-btn */
 .appointment-btn {
     margin-left: 25px;
     background: #1977cc;
@@ -123,7 +122,13 @@ h6 {
     color: #fff;
 }
 
-/*Navigation for desktop*/
+@media (max-width: 768px) {
+    .appointment-btn {
+        display: none;
+    }
+}
+
+/*Navbar for desktop*/
 .navbar {
     padding: 0;
 }
@@ -174,12 +179,11 @@ h6 {
     border-color: #1977cc;
 }
 
-extender {
+#extender a {
     display: none;
 }
 
-
-/* Navigation for mobile devices */
+/*Navbar for mobile*/
 .mobile-nav-toggle {
     color: #2c4964;
     font-size: 28px;
@@ -191,6 +195,20 @@ extender {
 
 .mobile-nav-toggle.bi-x {
     color: #fff;
+}
+
+@media (max-width: 991px) {
+    .mobile-nav-toggle {
+        display: block;
+    }
+
+    .navbar ul {
+        display: none;
+    }
+
+    #extender a {
+        display: block;
+    }
 }
 
 .navbar-mobile {
@@ -245,9 +263,7 @@ extender {
     margin: 15px;
 }
 
-
-
-/*General styles for sections*/
+/*Styles for all sections in Landing page*/
 section {
     padding: 60px 0;
     overflow: hidden;
@@ -325,7 +341,42 @@ section {
     font-size: 24px;
 }
 
-/*About section*/
+
+@media (min-width: 1024px) {
+    #home {
+        background-attachment: fixed;
+    }
+}
+
+@media (max-width: 992px) {
+    #home {
+        margin-bottom: 0;
+        height: 100vh;
+    }
+
+    #home .container {
+        padding-bottom: 63px;
+    }
+
+    #home h1 {
+        font-size: 28px;
+        line-height: 36px;
+    }
+
+    #home h2 {
+        font-size: 18px;
+        line-height: 24px;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-height: 600px) {
+    #home {
+        height: 110vh;
+    }
+}
+
+/*About Section*/
 .about .icon-boxes h4 {
     font-size: 18px;
     color: #4b7dab;
@@ -562,15 +613,13 @@ section {
     color: #fff;
 }
 
-#services .btn-get-started {
+.services .btn-get-started {
     font-family: "Raleway", sans-serif;
     text-transform: uppercase;
     font-weight: 500;
     font-size: 14px;
     letter-spacing: 1px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: inline-block;
     padding: 12px 35px;
     margin-top: 30px;
     border-radius: 50px;
@@ -579,11 +628,7 @@ section {
     background: #1977cc;
 }
 
-#services .btn-get-started:hover {
-    background: #3fbbc0;
-}
-
-/*Doctors*/
+/*Doctors section */
 .doctors {
     background: #fff;
 }
@@ -676,15 +721,13 @@ section {
     margin-left: 8px;
 }
 
-#doctors .btn-get-started {
+.doctors .btn-get-started {
     font-family: "Raleway", sans-serif;
     text-transform: uppercase;
     font-weight: 500;
     font-size: 14px;
     letter-spacing: 1px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: inline-block;
     padding: 12px 35px;
     margin-top: 30px;
     border-radius: 50px;
@@ -693,31 +736,7 @@ section {
     background: #1977cc;
 }
 
-#doctors .btn-get-started:hover {
-    background: #3fbbc0;
-}
-
-/*Google Maps*/
-.mapouter {
-    position: relative;
-    text-align: right;
-    width: 100%;
-    height: 363px;
-}
-
-.gmap_canvas {
-    overflow: hidden;
-    background: none !important;
-    width: 100%;
-    height: 363px;
-}
-
-.gmap_iframe {
-    height: 363px !important;
-}
-
-/*Contact section */
-
+/*Contact section*/
 .contact .info {
     width: 100%;
     background: #fff;
@@ -819,6 +838,25 @@ section {
     100% {
         transform: rotate(360deg);
     }
+}
+
+/*Gmap styles*/
+.mapouter {
+    position: relative;
+    text-align: right;
+    width: 100%;
+    height: 363px;
+}
+
+.gmap_canvas {
+    overflow: hidden;
+    background: none !important;
+    width: 100%;
+    height: 363px;
+}
+
+.gmap_iframe {
+    height: 363px !important;
 }
 
 /*Footer*/
@@ -963,7 +1001,7 @@ section {
     font-size: 13px;
 }
 
-/*Back to top btn*/
+/*Back to top btn */
 .back-to-top {
     position: fixed;
     visibility: hidden;
@@ -994,12 +1032,7 @@ section {
     opacity: 1;
 }
 
-/*For appointment page*/
-#appointment {
-    padding: 150px 0;
-    overflow: hidden;
-}
-
+/*Styles for appointment page */
 .appointment .php-email-form {
     width: 100%;
 }
@@ -1044,72 +1077,4 @@ section {
 
 .appointment .php-email-form button[type="submit"]:hover {
     background: #3fbbc0;
-}
-
-/*Media queries for appointment-btn */
-@media (max-width: 768px) {
-    .appointment-btn {
-        display: none;
-    }
-
-    #extender {
-        display: block;
-    }
-}
-
-@media(min-width: 991px) {
-    .mobile-nav-toggle {
-        display: block;
-    }
-
-    #extender {
-        display: none;
-    }
-}
-
-/*Media Queries for mobile devices*/
-@media (max-width: 991px) {
-    .mobile-nav-toggle {
-        display: block;
-    }
-
-    .navbar ul {
-        display: none;
-    }
-
-}
-
-/*Media Queries for hero section*/
-@media (min-width: 1024px) {
-    #home {
-        background-attachment: fixed;
-    }
-}
-
-@media (max-width: 992px) {
-    #home {
-        margin-bottom: 0;
-        height: 100vh;
-    }
-
-    #home .container {
-        padding-bottom: 63px;
-    }
-
-    #home h1 {
-        font-size: 28px;
-        line-height: 36px;
-    }
-
-    #home h2 {
-        font-size: 18px;
-        line-height: 24px;
-        margin-bottom: 30px;
-    }
-}
-
-@media (max-height: 600px) {
-    #home {
-        height: 110vh;
-    }
 }
