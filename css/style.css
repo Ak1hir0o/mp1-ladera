@@ -1080,3 +1080,12 @@ section {
 }
 
 /*styles for service page*/
+.container .custom-container {
+    width: 95rem;
+    font-size: 16px;
+    min-width: 30em;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
