@@ -16,11 +16,18 @@
   /**
    * Easy event listener function
    */
-  const on = (type, el, listener, all = false) => {
+  const on = (
+    type,
+    el,
+    listener,
+    all = false
+  ) => {
     let selectEl = select(el, all);
     if (selectEl) {
       if (all) {
-        selectEl.forEach((e) => e.addEventListener(type, listener));
+        selectEl.forEach((e) =>
+          e.addEventListener(type, listener)
+        );
       } else {
         selectEl.addEventListener(type, listener);
       }
@@ -37,7 +44,10 @@
   /**
    * Navbar links active state on scroll
    */
-  let navbarlinks = select("#navbar .scrollto", true);
+  let navbarlinks = select(
+    "#navbar .scrollto",
+    true
+  );
   const navbarlinksActive = () => {
     let position = window.scrollY + 200;
     navbarlinks.forEach((navbarlink) => {
@@ -46,7 +56,8 @@
       if (!section) return;
       if (
         position >= section.offsetTop &&
-        position <= section.offsetTop + section.offsetHeight
+        position <=
+          section.offsetTop + section.offsetHeight
       ) {
         navbarlink.classList.add("active");
       } else {
@@ -54,7 +65,10 @@
       }
     });
   };
-  window.addEventListener("load", navbarlinksActive);
+  window.addEventListener(
+    "load",
+    navbarlinksActive
+  );
   onscroll(document, navbarlinksActive);
 
   /**
@@ -79,18 +93,29 @@
   if (selectHeader) {
     const headerScrolled = () => {
       if (window.scrollY > 100) {
-        selectHeader.classList.add("header-scrolled");
+        selectHeader.classList.add(
+          "header-scrolled"
+        );
         if (selectTopbar) {
-          selectTopbar.classList.add("topbar-scrolled");
+          selectTopbar.classList.add(
+            "topbar-scrolled"
+          );
         }
       } else {
-        selectHeader.classList.remove("header-scrolled");
+        selectHeader.classList.remove(
+          "header-scrolled"
+        );
         if (selectTopbar) {
-          selectTopbar.classList.remove("topbar-scrolled");
+          selectTopbar.classList.remove(
+            "topbar-scrolled"
+          );
         }
       }
     };
-    window.addEventListener("load", headerScrolled);
+    window.addEventListener(
+      "load",
+      headerScrolled
+    );
     onscroll(document, headerScrolled);
   }
 
@@ -98,7 +123,9 @@
    * Mobile nav toggle
    */
   on("click", ".mobile-nav-toggle", function (e) {
-    select("#navbar").classList.toggle("navbar-mobile");
+    select("#navbar").classList.toggle(
+      "navbar-mobile"
+    );
     this.classList.toggle("bi-list");
     this.classList.toggle("bi-x");
   });
@@ -114,10 +141,20 @@
         e.preventDefault();
 
         let navbar = select("#navbar");
-        if (navbar.classList.contains("navbar-mobile")) {
-          navbar.classList.remove("navbar-mobile");
-          let navbarToggle = select(".mobile-nav-toggle");
-          navbarToggle.classList.toggle("bi-list");
+        if (
+          navbar.classList.contains(
+            "navbar-mobile"
+          )
+        ) {
+          navbar.classList.remove(
+            "navbar-mobile"
+          );
+          let navbarToggle = select(
+            ".mobile-nav-toggle"
+          );
+          navbarToggle.classList.toggle(
+            "bi-list"
+          );
           navbarToggle.classList.toggle("bi-x");
         }
         scrollto(this.hash);
@@ -156,7 +193,10 @@
         backtotop.classList.remove("active");
       }
     };
-    window.addEventListener("load", toggleBacktotop);
+    window.addEventListener(
+      "load",
+      toggleBacktotop
+    );
     onscroll(document, toggleBacktotop);
   }
 })();
@@ -164,9 +204,11 @@
 /**
  * Popovers
  */
-const popoverTriggerList = document.querySelectorAll(
-  '[data-bs-toggle="popover"]'
-);
+const popoverTriggerList =
+  document.querySelectorAll(
+    '[data-bs-toggle="popover"]'
+  );
 const popoverList = [...popoverTriggerList].map(
-  (popoverTriggerEl) => new bootstrap.Popover(popoverTriggerEl)
+  (popoverTriggerEl) =>
+    new bootstrap.Popover(popoverTriggerEl)
 );
