@@ -212,3 +212,8 @@ const popoverList = [...popoverTriggerList].map(
   (popoverTriggerEl) =>
     new bootstrap.Popover(popoverTriggerEl)
 );
+
+/**
+ * aos initate
+ */
+AOS.init();
