@@ -527,9 +527,7 @@ section {
 }
 
 .about .video-box {
-    background: url("../assets/thumbnail.png") center center no-repeat;
-    background-size: cover;
-    min-height: 500px;
+    max-height: 500px;
 }
 
 

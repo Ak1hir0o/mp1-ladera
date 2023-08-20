@@ -219,17 +219,32 @@ const popoverList = [...popoverTriggerList].map(
 AOS.init();
 
 /**
- * Video on scroll
+ * Autoplay on scroll video
+ */
 
-let observer = new IntersectionObserver(
-  (entries, observer) => {
+const videos = document.querySelectorAll("video"); // Select ALL the Videos
+const observer = new IntersectionObserver(
+  (entries) => {
     entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        vid.play();
+      if (!entry.isIntersecting) {
+        entry.target.pause(); // Pause the TARGET video
       } else {
-        vid.currentTime = 0;
+        entry.target.play(); // Play the TARGET video
       }
     });
-  }
+  },
+  {}
 );
-observer.observe(vid); */
+for (const video of videos)
+  observer.observe(video); // Observe EACH video
+const onVisibilityChange = () => {
+  if (document.hidden) {
+    for (const video of videos) video.pause(); // Pause EACH video
+  } else {
+    for (const video of videos) video.play(); // Play EACH video
+  }
+};
+document.addEventListener(
+  "visibilitychange",
+  onVisibilityChange
+);
