@@ -217,3 +217,19 @@ const popoverList = [...popoverTriggerList].map(
  * aos initate
  */
 AOS.init();
+
+/**
+ * Video on scroll
+
+let observer = new IntersectionObserver(
+  (entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        vid.play();
+      } else {
+        vid.currentTime = 0;
+      }
+    });
+  }
+);
+observer.observe(vid); */
