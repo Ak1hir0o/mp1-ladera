@@ -318,8 +318,7 @@ section {
     width: 100%;
     height: 90vh;
     background: url("../assets/home1.jpg") top center;
-    background-size: cover;
-    margin-bottom: -200px;
+    object-fit: cover;
 }
 
 #home .container {
@@ -391,7 +390,8 @@ section {
 
 @media (max-height: 600px) {
     #home {
-        height: 110vh;
+
+        height: 100vh;
     }
 }
 
