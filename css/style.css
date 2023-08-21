@@ -527,6 +527,8 @@ section {
 }
 
 .about .video-box {
+    display: inline-block;
+    height: fit-content;
     overflow: hidden;
     object-fit: cover;
     max-height: 500px;
