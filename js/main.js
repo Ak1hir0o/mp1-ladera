@@ -261,3 +261,8 @@ function toggleMute() {
     video.muted = true;
   }
 }
+
+/**
+ * For time and date
+ */
+flatpickr("#date", {});
